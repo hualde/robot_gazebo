@@ -11,11 +11,10 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
-# Install launch files
-install(DIRECTORY
-  urdf
-  meshes
-  DESTINATION share/${PROJECT_NAME}/
+# Install files
+install(
+  DIRECTORY urdf launch meshes
+  DESTINATION share/${PROJECT_NAME}
 )
 
 if(BUILD_TESTING)
